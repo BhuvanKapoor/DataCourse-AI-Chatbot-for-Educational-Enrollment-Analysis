@@ -1,0 +1,9 @@
+- creating a chatbot that gives a descriptive analysis of the user prompt 
+- the data is in sql database which has to be generated.
+- the database contains various tables such as students, department, courses, enrollment from last 5 years
+- there should be minimum of 10 courses
+- use a free open source LLM for the chatbot which converts the user prompt into sql query
+- results show either a plot related to the prompt or a descriptive analysis of the prompt
+- logging all the steps that happen in python and sql both
+
+
