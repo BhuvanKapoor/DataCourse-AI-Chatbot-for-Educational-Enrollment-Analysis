@@ -74,9 +74,9 @@ GOOGLE_API_KEY=your_google_api_key
 ### Set Up MySQL Database
 1. Create a MySQL database and tables as per the schema defined in the `data/schema.sql` file.
 2. Run the `data.py` script to populate the database with sample data:
-   ```bash
-   python src/data.py
-   ```
+```bash
+python src/data.py
+```
 
 ### Create a directory `logs`
 Create a directory `logs` in the root folder.
