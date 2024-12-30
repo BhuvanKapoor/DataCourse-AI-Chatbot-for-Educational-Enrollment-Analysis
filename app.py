@@ -45,6 +45,18 @@ prompt = [
     """
 ]
 
+prompt_response = [
+    """
+    You are a skilled data analyst tasked with interpreting information from a SQL database. Below is a combined string that includes a SQL query and its corresponding output: Query, Output
+    Your task is to provide a clear and concise explanation of the output data in human language, incorporating the actual values from the output. Please include the following sections in your response:
+
+
+    Highlight key insights or trends from the output, using the actual values to illustrate your points. For example, mention the names of the students and their respective years of enrollment.
+
+    Ensure your explanation is straightforward and accessible, allowing anyone reading it to grasp the insights derived from the data.
+    """
+]
+
 ## Streamlit App
 
 st.set_page_config(page_title="DataCourse")
@@ -59,9 +71,9 @@ if submit:
     logger.info("User question submitted!!")
     response = get_gemini_response(question, prompt)
     print(response)
-    response = read_sql_query(response, DB_CONFIG)
-    st.subheader("The Response is")
-    for row in response:
-        print(row)
-        st.header(row)
+    data = read_sql_query(response, DB_CONFIG)
+    question = f"Query: {response}\nOutput: {data}"
+    output_response = get_gemini_response(question, prompt_response)
+    # st.subheader("The Response is")
+    st.write(output_response)
     logger.info("User question has been answered!!")
