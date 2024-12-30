@@ -28,7 +28,7 @@ This project is an AI-powered chatbot designed to provide descriptive analysis a
 ├── /src                   # Source code for the application
 │   ├── __init__.py
 │   ├── data.py            # Data generation script
-│   ├── logger.py          # Looging script
+│   ├── logger.py          # Logger script
 │   └── query_generator.py # Query generation script
 │   
 ├── app.py                 # Main application file
