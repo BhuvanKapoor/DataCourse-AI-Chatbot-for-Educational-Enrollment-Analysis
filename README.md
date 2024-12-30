@@ -78,6 +78,12 @@ GOOGLE_API_KEY=your_google_api_key
    python src/data.py
    ```
 
+### Create a directory `logs`
+Create a directory `logs` in the root folder.
+```bash
+mkdir logs
+```
+
 ### Run the Application
 Start the Streamlit application:
 ```bash
