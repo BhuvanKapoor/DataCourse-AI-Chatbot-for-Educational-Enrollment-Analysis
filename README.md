@@ -20,17 +20,20 @@ This project is an AI-powered chatbot designed to provide descriptive analysis a
 ```
 /Educational Enrollment Analysis Chatbot
 │
-├── /config                # Configuration files
-├── /data                  # Data generation scripts
+├── /config
+│    ├── __init__.py
+│    └── config.py                # Configuration files
+├── /data
+│    └── schema.sql                  
 ├── /src                   # Source code for the application
 │   ├── __init__.py
-│   ├── data.py
-│   ├── logger.py
-│   ├── query_generator.py
-│   └── app.py             # Main application file
-│
-├── /requirements.txt      # Python dependencies
-└── /README.md             # Project documentation
+│   ├── data.py            # Data generation script
+│   ├── logger.py          # Looging script
+│   └── query_generator.py # Query generation script
+│   
+├── app.py                 # Main application file
+├── requirements.txt       # Python dependencies
+└── README.md              # Project documentation
 ```
 
 ## Prerequisites
@@ -42,8 +45,8 @@ This project is an AI-powered chatbot designed to provide descriptive analysis a
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/yourusername/educational-enrollment-chatbot.git
-cd educational-enrollment-chatbot
+git clone https://github.com/BhuvanKapoor/DataCourse-AI-Chatbot-for-Educational-Enrollment-Analysis.git
+cd DataCourse-AI-Chatbot-for-Educational-Enrollment-Analysis
 ```
 
 ### Create a Virtual Environment
@@ -69,7 +72,7 @@ GOOGLE_API_KEY=your_google_api_key
 ```
 
 ### Set Up MySQL Database
-1. Create a MySQL database and tables as per the schema defined in the `data.py` file.
+1. Create a MySQL database and tables as per the schema defined in the `data/schema.sql` file.
 2. Run the `data.py` script to populate the database with sample data:
    ```bash
    python src/data.py
@@ -78,22 +81,16 @@ GOOGLE_API_KEY=your_google_api_key
 ### Run the Application
 Start the Streamlit application:
 ```bash
-streamlit run src/app.py
+streamlit run app.py
 ```
-Open your web browser and navigate to `http://localhost:8501` to access the chatbot interface.
+
 
 ## Usage
 - Type your questions related to student enrollment, courses, or departments in the input field.
-- The chatbot will process your query, execute the corresponding SQL command, and display the results along with visualizations.
+- The chatbot will process your query, execute the corresponding SQL command, and display the results.
 
 ## Logging
 All operations are logged in `logs/app.log`. This includes user interactions, SQL query executions, and any errors encountered.
 
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
-## Contact
-For any inquiries or issues, please contact [your_email@example.com].
