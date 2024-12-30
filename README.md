@@ -1,4 +1,4 @@
-# Educational Enrollment Analysis Chatbot
+# DataCourse: AI Chatbot for Educational Enrollment Analysis
 
 ## Overview
 This project is an AI-powered chatbot designed to provide descriptive analysis and visualizations based on user queries related to educational enrollment data. The chatbot interacts with a SQL database containing information about students, courses, and departments over the last five years.
